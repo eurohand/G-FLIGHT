@@ -246,10 +246,20 @@ mysqli_select_db($connect, $database);
         $searchName = "<script>document.write (searchName);</script>";
         $hashIndex = "<script>document.write (hashIndex);</script>";
 
-        $sql="SELECT * FROM ranking ORDER BY score WHERE hash=$hashIndex AND name=$searchName";
-        $searchre = mysqli_query($connect, $sql);
+        $searchSql="SELECT * FROM ranking ORDER BY score WHERE hash=$hashIndex AND name=$searchName";
+        $searchRe = mysqli_query($connect, $searchSql);
+        $i = 1;
+        while($searchData=mysqli_fetch_array($searchRe)){
+          if($i>5){
+            break;
+          }
       ?>
-      alert(<?php $searchre ?>);
+      alert(<?php echo $date['name'];  $data['score']; $data['date']; $data['hash']; ?>);
+      <?php i++
+        }
+        mysqli_close($connect);
+      ?>
+
     }
 
     function changeMode(){
