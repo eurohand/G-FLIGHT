@@ -126,11 +126,11 @@ mysqli_select_db($connect, $database);
             }
         ?>
         <tr>
-            <th><?php echo $i;?></th>
-            <th><?php echo $data['name']; ?></th>
-            <th><?php echo $data['score']; ?></th>
-            <th><?php echo $data['date']; ?></th>
-            <th><?php echo $data['hash']; ?></th>
+            <td><?php echo $i;?></td>
+            <td><?php echo $data['name']; ?></td>
+            <td><?php echo $data['score']; ?></td>
+            <td><?php echo $data['date']; ?></td>
+            <td><?php echo $data['hash']; ?></td>
         </tr>
 
         <?php
