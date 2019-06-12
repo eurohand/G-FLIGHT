@@ -1702,7 +1702,7 @@
       objs3 = document.createElement('input');
       objs3.setAttribute('type', 'hidden');
       objs3.setAttribute('name', 'hash');
-      objs3.setAttribute('value', hash);
+      objs3.setAttribute('value', hash(name));
       form.appendChild(objs2);
 
       form.setAttribute('method', 'post');
