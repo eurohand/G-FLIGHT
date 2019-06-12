@@ -61,7 +61,7 @@ mysqli_select_db($connect, $database);
       font family: 'VT323';
       text-align: center;
     }
-    #dbtable{
+    table{
       width: 70%;
       margin-left: auto;
       margin-right: auto;
@@ -94,7 +94,7 @@ mysqli_select_db($connect, $database);
 
 
   <div id="container">
-    <table id="dbtable" cellpadding>
+    <table id="totalTable">
       <caption>
         <colgroup>
           <col style="width:20%">
@@ -118,7 +118,7 @@ mysqli_select_db($connect, $database);
           $re = mysqli_query($connect, $sql);
           $i = 1;
           while($data=mysqli_fetch_array($re)){
-            if($i>10){
+            if($i>5){
               break;
             }
         ?>
@@ -139,7 +139,7 @@ mysqli_select_db($connect, $database);
         </tbody>
       </caption>
     </table>
-    <div id="goBack">ESC: HOME</div>
+    <div id="goBack">ESC: HOME  ENTER: SEARCH</div>
   </div>
 
 
