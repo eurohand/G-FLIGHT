@@ -68,7 +68,7 @@ mysqli_select_db($connect, $database);
       width: 70%;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 5%;
+      margin-top: 3%;
       text-align: center;
       font-size: 40px;
     }
