@@ -734,7 +734,7 @@
 
 	Ship.prototype.rainSkill = function(){
 		for(let i=0 ; i<150 ; i++){
-			shipShoots.push(new Shoot(i*10, height, 0, -7, true));
+			shipShoots.push(new Shoot(i*10, this.y, 0, -7, true));
 		}
 	}
 	
