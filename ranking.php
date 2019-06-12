@@ -100,6 +100,10 @@ mysqli_select_db($connect, $database);
       font-size: 20px;
     }
 
+    h1{
+      font-size: 50px;
+    }
+
   </style>
 
 
