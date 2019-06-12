@@ -6,7 +6,7 @@ include_once("config/config.php");
 
 
 $connect = mysqli_connect($hostname,$username,$password,$database);
-mysqli_select_db($connect, $mydb['name']);
+mysqli_select_db($connect, $database);
 
 ?>
 <!DOCTYPE html>
