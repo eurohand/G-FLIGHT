@@ -17,6 +17,9 @@ mysqli_select_db($connect, $database);
   <head>
     <meta charset="utf-8">
     <title>G-FLGHT (RANKING)</title>
+    <link rel="preload" href="./font/pxiKyp0ihIEF2isQFJXGdg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./font/pxiKyp0ihIEF2isRFJXGdg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./font/pxiKyp0ihIEF2isfFJU.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body>
   <style>
