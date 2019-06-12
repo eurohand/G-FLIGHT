@@ -585,9 +585,9 @@
 		if(this.skillStatus === 0){
 			this.normalSkill();
 		}else if(this.skillStatus === 1){
-			this.circleSkill();
-		}else if(this.skillStatus === 2){
 			this.lineSkill();
+		}else if(this.skillStatus === 2){
+			this.circleSkill();
 		}else if(this.skillStatus === 3){
 			this.rainSkill();
 		}else if(this.skillStatus === 4){
@@ -1600,11 +1600,11 @@
 		ctx.textAlign =  "center";
 		fontText(30, "DOUBLE SHOT", storeRects[0].x + storeRects[0].w/2, storeRects[0].y + 20);
 		fontText(30, `${cost[0]}`, storeRects[0].x + storeRects[0].w/2, storeRects[0].y + 50);
-		fontText(30, "CIRCLE SKILL", storeRects[1].x + storeRects[1].w/2, storeRects[1].y + 20);
+		fontText(30, "LINE SKILL", storeRects[1].x + storeRects[1].w/2, storeRects[1].y + 20);
 		fontText(30, `${cost[1]}`, storeRects[1].x + storeRects[1].w/2, storeRects[1].y + 50);
 		fontText(30, "WAVE SHOT", storeRects[2].x + storeRects[2].w/2, storeRects[2].y + 20);
 		fontText(30, `${cost[2]}`, storeRects[2].x + storeRects[2].w/2, storeRects[2].y + 50);
-		fontText(30, "LINE SKILL", storeRects[3].x + storeRects[3].w/2, storeRects[3].y + 20);
+		fontText(30, "CIRCLE SKILL", storeRects[3].x + storeRects[3].w/2, storeRects[3].y + 20);
 		fontText(30, `${cost[3]}`, storeRects[3].x + storeRects[3].w/2, storeRects[3].y + 50);
 		fontText(30, "TRIPLE SHOT", storeRects[4].x + storeRects[4].w/2, storeRects[4].y + 20);
 		fontText(30, `${cost[4]}`, storeRects[4].x + storeRects[4].w/2, storeRects[4].y + 50);
