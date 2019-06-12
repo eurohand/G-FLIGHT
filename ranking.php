@@ -98,6 +98,7 @@ mysqli_select_db($connect, $database);
 
     span{
       font-size: 20px;
+      text-align: right;
     }
 
     h1{
@@ -209,7 +210,6 @@ mysqli_select_db($connect, $database);
 
 
   BODY.addEventListener("keydown", function(event){
-    console.log(keyActions[event.keyCode]);
     if(keyActions[event.keyCode] === "esc"){
       location.href = 'index.php';
     }else if(keyActions[event.keyCode] === "enter"){
