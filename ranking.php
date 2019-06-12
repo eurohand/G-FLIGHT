@@ -97,6 +97,7 @@ mysqli_select_db($connect, $database);
 
 
   <div id="container">
+    <h1>TOTAL RANK</h1>
     <table id="totalTable">
       <caption>
         <colgroup>
@@ -142,7 +143,10 @@ mysqli_select_db($connect, $database);
         </tbody>
       </caption>
     </table>
-    <div id="goBack">ESC: HOME &nbsp; &nbsp; &nbsp; ENTER: SEARCH</div>
+    <div id="goBack">
+    ESC: HOME &nbsp; &nbsp; &nbsp; ENTER: SEARCH &nbsp; &nbsp; &nbsp;
+    LEFT: PREVIOUS DAY &nbsp; &nbsp; &nbsp; RIGHT: NEXT DAY &nbsp; &nbsp; &nbsp; UP & DOWN: CHANGE RANK MODE
+    </div>
   </div>
 
 
