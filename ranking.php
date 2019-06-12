@@ -70,6 +70,9 @@ mysqli_select_db($connect, $database);
       font-family: 'VT323';
       font-size: 40px;
     }
+    th{
+      font-size: 50px;
+    }
 
     th, td{
       padding: 10px;
@@ -139,7 +142,7 @@ mysqli_select_db($connect, $database);
         </tbody>
       </caption>
     </table>
-    <div id="goBack">ESC: HOME  ENTER: SEARCH</div>
+    <div id="goBack">ESC: HOME &nbsp; &nbsp; &nbsp; &nbsp; ENTER: SEARCH</div>
   </div>
 
 
