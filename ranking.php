@@ -31,7 +31,9 @@ mysqli_select_db($connect, $database);
     #table{
       width: 50%;
       height: 70%;
-      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10%;
       text-align: center;
       font: 15px VT323;
     }
@@ -50,10 +52,10 @@ mysqli_select_db($connect, $database);
         </colgroup>
         <thead>
           <tr>
-            <th scope="col">순위</th>
-            <th scope="col">이름</th>
-            <th scope="col">점수</th>
-            <th scope="col">날자</th>
+            <th scope="col">RANK</th>
+            <th scope="col">NAME</th>
+            <th scope="col">SCORE</th>
+            <th scope="col">DATE</th>
             </tr>
         </thead>
 
