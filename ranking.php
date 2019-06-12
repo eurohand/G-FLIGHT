@@ -104,7 +104,7 @@ mysqli_select_db($connect, $database);
 
 
   <div id="container">
-    <h1>TOTAL RANK</h1>
+    <h1><br>TOTAL RANK</h1>
     <table id="totalTable">
       <caption>
         <colgroup>
