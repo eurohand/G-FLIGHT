@@ -162,7 +162,7 @@ mysqli_select_db($connect, $database);
     
     
     <div id="goBack">
-    ESC: HOME &nbsp; &nbsp; &nbsp; ENTER: SEARCH &nbsp; &nbsp; &nbsp;
+    ESC: HOME &nbsp; &nbsp; &nbsp; ENTER: SEARCH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
           <span>
           LEFT: PREVIOUS DAY &nbsp; &nbsp; &nbsp; RIGHT: NEXT DAY &nbsp; &nbsp; &nbsp; UP & DOWN: CHANGE RANK MODE
           </span>
