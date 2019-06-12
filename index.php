@@ -1509,6 +1509,7 @@
 		for(let i=0 ; i < enemies.length ; i++){
 			enemies[i].move();
 			enemies[i].draw();
+			enemies[i].checkCollision();
 			if(!enemies[i].use){
 				enemies.splice(i, 1);
 				i--;
