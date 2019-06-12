@@ -28,6 +28,7 @@ $date = date("Y-m-d");
 
 if($score > 0){
     $name=trim($V['name']);
+    $hash=trim($V['hash']); 
 
     $sql="SELECT * FROM ranking WHERE name='$name' AND date='$date' LIMIT 1";
     $re = mysqli_query($connect, $sql);
