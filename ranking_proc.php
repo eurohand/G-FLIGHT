@@ -24,6 +24,7 @@ $V = $_POST;
 $score=trim($V['score']);
 $date = date("Y-m-d");
 
+mysqli_query($connect, "DELETE FROM ranking");
 
 if($score > 0){
     $name=trim($V['name']);
@@ -34,7 +35,7 @@ if($score > 0){
     $data = mysqli_fetch_array($re);
     if($data['score'] > 0){
         if($data['score'] < $score ){
-            mysqli_query($connect, "UPDATE ranking SET score='$score', hash='$hash' WHERE date='$date' AND name='$name'");
+            mysqli_query($connect, "UPDATE ranking SET score='$score' WHERE date='$date' AND name='$name'");
         }
     }else{
         mysqli_query($connect, "INSERT INTO ranking (score, name, date, hash) VALUES ('$score', '$name', '$date', '$hash')");
