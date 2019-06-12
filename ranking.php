@@ -2,11 +2,10 @@
 @header('Content-Type: text/html; charset=UTF-8');
 @date_default_timezone_set('Asia/Seoul');
 
-include_once("https://gflight.herokuapp.com/config/config.php");
-include_once($CFG['ABSPATH']."/config/set_db.php");
-include_once($CFG['ABSPATH']."/config/set_tbl.php");
+include_once("config/config.php");
 
-$connect = mysqli_connect($mydb['host'],$mydb['user'],$mydb['pass'],$mydb['name']);
+
+$connect = mysqli_connect($hostname,$username,$password,$database);
 mysqli_select_db($connect, $mydb['name']);
 
 ?>
