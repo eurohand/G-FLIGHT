@@ -20,7 +20,12 @@ mysqli_select_db($connect, $database);
   </head>
   <body>
   <style>
-   @import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+
+   @font-face {
+    font-family: 'VT323'; /*a name to be used later*/
+    src: url('https://fonts.googleapis.com/css?family=VT323&display=swap'); /*URL to font*/
+  }
+
     #container{
       width: 1480px;
       height: 680px;
@@ -35,7 +40,7 @@ mysqli_select_db($connect, $database);
       margin-right: auto;
       margin-top: 10%;
       text-align: center;
-      font: 15px VT323;
+      font family: 'VT323';
     }
 
   </style>
