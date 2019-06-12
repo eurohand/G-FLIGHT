@@ -75,11 +75,18 @@ mysqli_select_db($connect, $database);
       padding: 10px;
     }
 
+    #goBack{
+      float: left;
+      margin-left: 5%;
+      font-family: 'VT323';
+      font-size: 40px;
+    }
+
   </style>
 
 
   <div id="container">
-    <table id="dbtable">
+    <table id="dbtable" cellpadding>
       <caption>
         <colgroup>
           <col style="width:20%">
@@ -134,15 +141,30 @@ mysqli_select_db($connect, $database);
 
  
 
-  <div class="goBack">돌아가기</div>
+  <div id="goBack">ESC: HOME</div>
+
+  <script>
+  const BODY = document.querySelector('body');
+
+  BODY.addEventlistener("keydown", function(e){
+    if(keyActions[event.keyCode] === "esc")
+    location.href = 'index.php';
+  })
+
+  let keyActions = {
+      13: "enter"
+      
+      38: "arrowUp",
+      40: "arrowDown",
+      37: "arrowLeft",
+      39: "arrowRight",
+      
+      27: "esc"
+    };
+  </script>
   </body>
 </html>
-<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-<script>
-$(".goBack").click(function() {
-    location.href = 'index.php';
-});
-</script>
+
 
 
 
