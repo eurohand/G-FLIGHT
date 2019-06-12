@@ -4,12 +4,11 @@
 @date_default_timezone_set('Asia/Seoul');
 include_once("config/config.php");
 
-$url = getenv('mysql://wnvaak8rsg3pchfw:pimtbqjggrbf1tiv@thzz882efnak0xod.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/clp3n4gm746vekgy');
-$dbparts = parse_url($url);
-$hostname = $dbparts['host'];
-$username = $dbparts['user'];
-$password = $dbparts['pass'];
-$database = ltrim($dbparts['path'],'/');
+
+$hostname = 'thzz882efnak0xod.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
+$username = 'wnvaak8rsg3pchfw';
+$password = 'pimtbqjggrbf1tiv';
+$database = 'clp3n4gm746vekgy';
 
 $connect = mysqli_connect($hostname, $username, $password, $database);
 
