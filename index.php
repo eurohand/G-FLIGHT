@@ -129,20 +129,18 @@
 	}
 	
 	function shotCheck(){
-		let currentShot = parseInt(localStorage.getItem('Shot'));
-		if(currentShot !== NaN){
-			localStorage.setItem('Shot', parseInt(shipShootStatus));
-		}else{
-			shipShootStatus = currentShot;
+		if(localStorage.getItem('Shot') == null){
+			localStorage.setItem('Shot', shipShootStatus);
+		} else{
+			shipShootStatus = parseInt(localStorage.getItem('Shot'));
 		}
 	}
 	
 	function skillCheck(){
-		let currentSkill = parseInt(localStorage.getItem('Skill'));
-		if(currentSkill !== NaN){
-			localStorage.setItem('Skill', parseInt(shipSkillStatus));
-		}else{
-			shipSkillStatus = currentSkill;
+		if(localStorage.getItem('Skill') == null){
+			localStorage.setItem('Skill', shipSkillStatus);
+		} else{
+			shipSkillStatus = parseInt(localStorage.getItem('Skill'));
 		}
 	}
 
@@ -1668,7 +1666,6 @@
 	
 	function uploadRank(name){
 	  var form = document.createElement('form');
-	  alert(hash(name));
       var objs;
       objs = document.createElement('input');
       objs.setAttribute('type', 'hidden');
