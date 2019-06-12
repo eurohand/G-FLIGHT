@@ -162,11 +162,11 @@ mysqli_select_db($connect, $database);
     let div = document.createElement('div');
     div.className = 'dot';
     div.bgColor = "#" + color + color + color;
-    div.style.width = r;
-    div.style.height = r;
+    div.style.width = r + 'px';
+    div.style.height = r + 'px';
     div.style.position = 'absolute';
-    div.style.left = x;
-    div.style.top = y;
+    div.style.left = x + 'px';
+    div.style.top = y + 'px';
     document.getElementById("container").appendChild(div);
 		this.color = color+color+color;
 	}
@@ -180,7 +180,7 @@ mysqli_select_db($connect, $database);
 	}
 
 
-  BODY.addEventListener("keydown", function(e){
+  BODY.addEventListener("keydown", function(event){
     console.log(keyActions[event.keyCode]);
     if(keyActions[event.keyCode] === "esc")
       location.href = 'index.php';
