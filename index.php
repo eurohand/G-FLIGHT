@@ -1688,7 +1688,7 @@
 	
 	function uploadRank(name){
 	  var form = document.createElement('form');
-	  alert(hash(name));
+	  console.log(hash(name));
       var objs;
       objs = document.createElement('input');
       objs.setAttribute('type', 'hidden');
