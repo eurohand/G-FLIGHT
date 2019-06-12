@@ -649,7 +649,7 @@
 		let acos = this.cos * cos(this.wavePoint) - this.sin * sin(this.wavePoint);
 		let asin = this.sin * cos(this.wavePoint) + this.cos * sin(this.wavePoint);
 		shipShoots.push(new Shoot(this.x, this.y, 50*acos, -50*asin, true));
-		
+		shipShoots.push(new Shoot(this.x, this.y, 50*this.cos, -50*this.sin, true));
 		if(this.waveControl){
 			this.wavePoint+=10;
 		}else{
