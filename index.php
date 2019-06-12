@@ -107,15 +107,19 @@
 		pointCheck();
 		scoreCheck();
 		let name = prompt("TYPE YOUR NAME: ");
-		uploadRank(name);
+		if(name == null){
+			location.href = 'inedx.php';
+		}else{
+			uploadRank(name);
+		}
+		
 	}
 	
 	function pointCheck(){
-		if(localStorage.getItem('Credit') == null){
-			localStorage.setItem('Credit', point);
-		} else{
+		if(localStorage.getItem('Credit') !== null){
 			point = parseInt(localStorage.getItem('Credit'));
-		}
+		point += Math.floor(score/200);
+			localStorage.setItem('Credit', point);
 	}
 	
 	
