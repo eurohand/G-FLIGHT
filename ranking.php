@@ -254,7 +254,7 @@ mysqli_select_db($connect, $database);
             break;
           }
       ?>
-      alert(<?php echo $date['name'];  $data['score']; $data['date']; $data['hash']; ?>);
+      alert(<?php echo $searchData['name'];  $searchData['score']; $searchData['date']; $searchData['hash']; ?>);
       <?php i++
         }
         mysqli_close($connect);
