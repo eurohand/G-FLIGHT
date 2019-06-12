@@ -59,6 +59,7 @@ mysqli_select_db($connect, $database);
       background-color: black;
       color: white;
       font family: 'VT323';
+      text-align: center;
     }
     #dbtable{
       width: 50%;
@@ -79,9 +80,9 @@ mysqli_select_db($connect, $database);
       <caption>
         <colgroup>
           <col style="width:20%">
+          <col style="width:30%">
           <col style="width:20%">
-          <col style="width:20%">
-          <col style="width:40%">
+          <col style="width:30%">
         </colgroup>
         <thead>
           <tr>
