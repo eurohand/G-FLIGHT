@@ -159,9 +159,14 @@ mysqli_select_db($connect, $database);
   
 
   let Dot = function(x, y, r, color){
-    this.div = document.createElement('div');
+    let div = document.createElement('div');
     div.className = 'dot';
     div.bgColor = "#" + color + color + color;
+    div.style.width = r;
+    div.style.height = r;
+    div.style.position = absolute;
+    div.style.left = x;
+    div.style.top = y;
     document.getElementByTagName('body')[0].appendChild(div);
 		this.color = color+color+color;
 	}

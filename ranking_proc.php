@@ -17,7 +17,7 @@ $connect = mysqli_connect($hostname, $username, $password, $database);
 // }
 // echo "Connection was successfully established!";
 
-mysqli_select_db($connect, $database);
+//mysqli_select_db($connect, $database);
 
 $V = $_POST;
 
