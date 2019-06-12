@@ -38,7 +38,7 @@ mysqli_select_db($connect, $database);
       height: 70%;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 10%;
+      margin-top: 5%;
       text-align: center;
       font family: 'VT323';
     }

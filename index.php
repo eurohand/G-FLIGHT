@@ -1219,8 +1219,8 @@
 	
 	let userName;
 	let score = 0;
-	let highScore = 0;
-	let point = 0;
+	let highScore = localStorage.getItem('HighScore')? parseInt(localStorage.getItem('HighScore')) : 0;
+	let point = localStorage.getItem('Credit')? parseInt(localStorage.getItem('Credit')) : 0;
 	let start = false;
 	let store = false;
 	let rank = false;
