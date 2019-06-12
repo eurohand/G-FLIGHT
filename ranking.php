@@ -242,20 +242,21 @@ mysqli_select_db($connect, $database);
     function search(){
       let searchName = prompt("TYPE NAME ?");
       let hashIndex = hash(searchName);
+      console.log(hash(searchName));
       <?php 
-        $searchName = "<script>document.write (searchName);</script>";
-        $hashIndex = "<script>document.write (hashIndex);</script>";
+        $searchName = '<script>document.write(searchName);</script>';
+        $hashIndex = '<script>document.write(hashIndex);</script>';
 
         $searchSql="SELECT * FROM ranking ORDER BY score WHERE hash=$hashIndex AND name=$searchName";
         $searchRe = mysqli_query($connect, $searchSql);
-        $i = 1;
+        $j = 1;
         while($searchData=mysqli_fetch_array($searchRe)){
-          if($i>5){
+          if($j>5){
             break;
           }
       ?>
       alert(<?php echo $searchData['name'];  $searchData['score']; $searchData['date']; $searchData['hash']; ?>);
-      <?php i++
+      <?php j++
         }
         mysqli_close($connect);
       ?>
