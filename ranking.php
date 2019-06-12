@@ -84,6 +84,12 @@ mysqli_select_db($connect, $database);
       font-size: 40px;
     }
 
+    .dot{
+      position: absolute;
+      left: random(1500);
+      top: ramdon(700);
+    }
+
   </style>
 
 
@@ -148,6 +154,27 @@ mysqli_select_db($connect, $database);
 
   <script>
   const BODY = document.querySelector('body');
+  
+
+  let Dot = function(x, y, r, color){
+    this.div = document.createElement('div');
+    div.className = 'dot';
+    div.bgColor = "#" + color + color + color;
+    document.getElementByTagName('body')[0].appendChild(div);
+		this.x = x;
+		this.y = y;
+		this.r = r;
+		this.color = color+color+color;
+	}
+	
+
+
+  let random = (number) => Math.floor(Math.random() * number);
+  let dots = [];
+  for(let i=0 ; i<250 ; i++){
+		dots.push(new Dot(random(width), random(height), random(4), random(14).toString(16)));
+	}
+
 
   BODY.addEventListener("keydown", function(e){
     if(keyActions[event.keyCode] === "esc")
