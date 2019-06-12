@@ -74,6 +74,7 @@ mysqli_select_db($connect, $database);
     }
     th{
       font-size: 50px;
+      color: slategray;
     }
 
     th, td{
