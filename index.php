@@ -9,7 +9,7 @@
 <body>
 <canvas id = "canvas" width = "1500" height = "700"></canvas>
 <audio data-key="hit" src="bgm/hit.mp3"></audio>
-<audio data-key="damage" src="bgm/damage,mp3"></audio>
+<audio data-key="damage" src="bgm/damage.mp3"></audio>
 <audio data-key="gameover" src="bgm/gameover.mp3"></audio>
 <style>
   @font-face {
