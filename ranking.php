@@ -62,8 +62,7 @@ mysqli_select_db($connect, $database);
       text-align: center;
     }
     #dbtable{
-      width: 50%;
-      height: 70%;
+      width: 70%;
       margin-left: auto;
       margin-right: auto;
       margin-top: 5%;
