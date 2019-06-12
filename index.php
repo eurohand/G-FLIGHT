@@ -1687,25 +1687,30 @@
 	}
 	
 	function uploadRank(name){
-		var form = document.createElement('form');
-		var objs;
-		objs = document.createElement('input');
-		objs.setAttribute('type', 'hidden');
-		objs.setAttribute('name', 'score');
-		objs.setAttribute('value', score);
-		form.appendChild(objs);
-		objs2 = document.createElement('input');
-		objs2.setAttribute('type', 'hidden');
-		objs2.setAttribute('name', 'name');
-		objs2.setAttribute('value', name);
-		form.appendChild(objs2);
+      var form = document.createElement('form');
+      var objs;
+      objs = document.createElement('input');
+      objs.setAttribute('type', 'hidden');
+      objs.setAttribute('name', 'score');
+      objs.setAttribute('value', score);
+      form.appendChild(objs);
+      objs2 = document.createElement('input');
+      objs2.setAttribute('type', 'hidden');
+      objs2.setAttribute('name', 'name');
+      objs2.setAttribute('value', name);
+      form.appendChild(objs2);
+      objs3 = document.createElement('input');
+      objs3.setAttribute('type', 'hidden');
+      objs3.setAttribute('name', 'hash');
+      objs3.setAttribute('value', hash);
+      form.appendChild(objs2);
 
-		form.setAttribute('method', 'post');
-		form.setAttribute('action', "ranking_proc.php");
-		document.body.appendChild(form);
-		form.submit();
-		
-	}
+      form.setAttribute('method', 'post');
+      form.setAttribute('action', "ranking_proc.php");
+      document.body.appendChild(form);
+      form.submit();
+      
+   }
 	
 	
 	
