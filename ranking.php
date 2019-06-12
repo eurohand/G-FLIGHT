@@ -239,12 +239,29 @@ mysqli_select_db($connect, $database);
 
     //event handle function
     function search(){
+      let searchName = prompt("TYPE NAME ?");
+      let hashIndex = hash(searchName);
+      <?php 
+        $searchName = "<script>document.write (searchName);</script>";
+        $hashIndex = "<script>document.write (hashIndex);</script>";
 
+        $sql="SELECT * FROM ranking ORDER BY score DESC WHERE hash=$hashIndex AND name=$searchName";
+        $searchre = mysqli_query($connect, $sql);
+      ?>
+      alert(<?php $searchre ?>);
     }
 
     function changeMode(){
       mode = !mode;
     }
+
+    function hash(name){
+		  let key = 0;
+		  for(let i=0 ; i<name.length ; i++){
+		  	key += name.charCodeAt(i);
+		  }
+		  return key%TABLE_SIZE;
+  	}
 
   </script>
   </body>
