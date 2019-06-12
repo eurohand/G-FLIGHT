@@ -154,7 +154,7 @@ mysqli_select_db($connect, $database);
   })
 
   let keyActions = {
-      13: "enter"
+      13: "enter",
       
       38: "arrowUp",
       40: "arrowDown",
