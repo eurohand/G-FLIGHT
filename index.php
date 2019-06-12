@@ -869,7 +869,7 @@
 		shipShoots.forEach((shoot) => {
 			if((shoot.x >= left && shoot.x <= right && shoot.y >= up && shoot.y <= down && shoot.my && species === 0)
 			|| (Math.sqrt((shoot.x - x)*(shoot.x - x) + (shoot.y - y)*(shoot.y - y)) < ENEMY_SIZE && shoot.my)){
-				enemies.splice(i, 1);
+				this..use = false;
 				shipShoots.splice(shipShoots.indexOf(shoot), 1);
 				playSound("hit");
 				score += 10;
@@ -1509,7 +1509,7 @@
 		for(let i=0 ; i < enemies.length ; i++){
 			enemies[i].move();
 			enemies[i].draw();
-			if(!enemies[i].use || enemies[i].checkCollision(i)){
+			if(!enemies[i].use){
 				enemies.splice(i, 1);
 				i--;
 			}
