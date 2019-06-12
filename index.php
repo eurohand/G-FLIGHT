@@ -55,7 +55,7 @@
 	const START_Y = 275;
 	const STORE_Y = 350;
 	const RANK_Y = 425;
-	const TABLE_SIZE = 13;
+	const TABLE_SIZE = 50;
 	const FONT_NAME = 'VT323';
 	const IMG_SRC = 'https://lh3.googleusercontent.com/Zupg6_TMI0uRGRYQEVJ9ULDslHDG4TSIf1fmQ4zeIoL-cUbMe_lOoYjJoih5LjIARw';
 	
