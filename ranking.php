@@ -183,6 +183,7 @@ mysqli_select_db($connect, $database);
 
   <script>
   const BODY = document.querySelector('body');
+  const TABLE_SIZE = 50;
   let mode = true;
   
   
