@@ -104,52 +104,56 @@ mysqli_select_db($connect, $database);
 
 
   <div id="container">
-    <h1><br>TOTAL RANK</h1>
-    <table id="totalTable">
-      <caption>
-        <colgroup>
-          <col style="width:20%">
-          <col style="width:30%">
-          <col style="width:20%">
-          <col style="width:30%">
-        </colgroup>
-        <thead>
-          <tr>
-            <th scope="col">RANK</th>
-            <th scope="col">NAME</th>
-            <th scope="col">SCORE</th>
-            <th scope="col">DATE</th>
-            <th scope="col">HASH</th>
-            </tr>
-        </thead>
+    <div id="total">
+      <h1><br>TOTAL RANK</h1>
+      <table id="totalTable">
+        <caption>
+          <colgroup>
+            <col style="width:20%">
+            <col style="width:30%">
+            <col style="width:20%">
+            <col style="width:30%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">RANK</th>
+              <th scope="col">NAME</th>
+              <th scope="col">SCORE</th>
+              <th scope="col">DATE</th>
+              <th scope="col">HASH</th>
+              </tr>
+          </thead>
 
-        <tbody>
-        <?php
-          $sql="SELECT * FROM ranking ORDER BY score DESC";
-          $re = mysqli_query($connect, $sql);
-          $i = 1;
-          while($data=mysqli_fetch_array($re)){
-            if($i>5){
-              break;
-            }
-        ?>
-        <tr>
-            <td><?php echo $i;?></td>
-            <td><?php echo $data['name']; ?></td>
-            <td><?php echo $data['score']; ?></td>
-            <td><?php echo $data['date']; ?></td>
-            <td><?php echo $data['hash']; ?></td>
-        </tr>
-
-        <?php
-            $i++;
-          }
-          mysqli_close($connect);
+          <tbody>
+          <?php
+            $sql="SELECT * FROM ranking ORDER BY score DESC";
+            $re = mysqli_query($connect, $sql);
+            $i = 1;
+            while($data=mysqli_fetch_array($re)){
+              if($i>5){
+                break;
+              }
           ?>
+          <tr>
+              <td><?php echo $i;?></td>
+              <td><?php echo $data['name']; ?></td>
+              <td><?php echo $data['score']; ?></td>
+              <td><?php echo $data['date']; ?></td>
+              <td><?php echo $data['hash']; ?></td>
+          </tr>
 
-        </tbody>
-      </caption>
-    </table>
+          <?php
+              $i++;
+            }
+            mysqli_close($connect);
+            ?>
+
+          </tbody>
+        </caption>
+      </table>
+    </div>
+    
+    
     <div id="goBack">
     ESC: HOME &nbsp; &nbsp; &nbsp; ENTER: SEARCH &nbsp; &nbsp; &nbsp;
           <span>
@@ -172,8 +176,9 @@ mysqli_select_db($connect, $database);
 
   <script>
   const BODY = document.querySelector('body');
+  let mode = true;
   
-
+  
   let Dot = function(x, y, r, color){
     let div = document.createElement('div');
     div.className = 'dot';
@@ -188,7 +193,6 @@ mysqli_select_db($connect, $database);
 	}
 	
 
-
   let random = (number) => Math.floor(Math.random() * number);
   let dots = [];
   for(let i=0 ; i<250 ; i++){
@@ -196,10 +200,23 @@ mysqli_select_db($connect, $database);
 	}
 
 
+
+
+
   BODY.addEventListener("keydown", function(event){
     console.log(keyActions[event.keyCode]);
-    if(keyActions[event.keyCode] === "esc")
+    if(keyActions[event.keyCode] === "esc"){
       location.href = 'index.php';
+    }else if(keyActions[event.keyCode] === "enter"){
+      search();
+    }else if(keyActions[event.keyCode] === "arrowUp" || keyActions[event.keyCode] === "arrowDown"){
+      changeMode();
+    }else if(keyActions[event.keyCode] === "arrowLeft"){
+      
+    }else if(keyActions[event.keyCode] === "arrowRight"){
+      
+    }
+      
   })
 
   let keyActions = {
@@ -212,6 +229,17 @@ mysqli_select_db($connect, $database);
       
       27: "esc"
     };
+
+
+    //event handle function
+    function search(){
+
+    }
+
+    function changeMode(){
+      mode = !mode;
+    }
+
   </script>
   </body>
 </html>
