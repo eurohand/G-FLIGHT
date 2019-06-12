@@ -700,8 +700,8 @@
 	
 	
 	Ship.prototype.normalSkill = function(){
-		for(let i=0 ; i<30 ; i++){
-			shipShoots.push(new Shoot(this.x, this.y, 50*Math.cos(Math.PI/180*i*12), -50*Math.sin(Math.PI/180*i*12), true));
+		for(let i=0 ; i<15 ; i++){
+			shipShoots.push(new Shoot(this.x, this.y, 50*Math.cos(Math.PI/180*i*24), -50*Math.sin(Math.PI/180*i*24), true));
 		}
 	}
 	
