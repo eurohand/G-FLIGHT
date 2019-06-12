@@ -164,10 +164,10 @@ mysqli_select_db($connect, $database);
     div.bgColor = "#" + color + color + color;
     div.style.width = r;
     div.style.height = r;
-    div.style.position = absolute;
+    div.style.position = 'absolute';
     div.style.left = x;
     div.style.top = y;
-    document.getElementByTagName('body')[0].appendChild(div);
+    document.getElementById("container").appendChild(div);
 		this.color = color+color+color;
 	}
 	
