@@ -487,9 +487,9 @@
 		}else if(this.shootStatus === 1){
 			this.doubleShot();
 		}else if(this.shootStatus === 2){
-			this.tripleShot();
-		}else if(this.shootStatus === 3){
 			this.waveShot();
+		}else if(this.shootStatus === 3){
+			this.tripleShot();
 		}else if(this.shootStatus === 4){
 			this.spreadShot();
 		}
@@ -1602,11 +1602,11 @@
 		fontText(30, `${cost[0]}`, storeRects[0].x + storeRects[0].w/2, storeRects[0].y + 50);
 		fontText(30, "CIRCLE SKILL", storeRects[1].x + storeRects[1].w/2, storeRects[1].y + 20);
 		fontText(30, `${cost[1]}`, storeRects[1].x + storeRects[1].w/2, storeRects[1].y + 50);
-		fontText(30, "TRIPLE SHOT", storeRects[2].x + storeRects[2].w/2, storeRects[2].y + 20);
+		fontText(30, "WAVE SHOT", storeRects[2].x + storeRects[2].w/2, storeRects[2].y + 20);
 		fontText(30, `${cost[2]}`, storeRects[2].x + storeRects[2].w/2, storeRects[2].y + 50);
 		fontText(30, "LINE SKILL", storeRects[3].x + storeRects[3].w/2, storeRects[3].y + 20);
 		fontText(30, `${cost[3]}`, storeRects[3].x + storeRects[3].w/2, storeRects[3].y + 50);
-		fontText(30, "WAVE SHOT", storeRects[4].x + storeRects[4].w/2, storeRects[4].y + 20);
+		fontText(30, "TRIPLE SHOT", storeRects[4].x + storeRects[4].w/2, storeRects[4].y + 20);
 		fontText(30, `${cost[4]}`, storeRects[4].x + storeRects[4].w/2, storeRects[4].y + 50);
 		fontText(30, "RAIN SKILL", storeRects[5].x + storeRects[5].w/2, storeRects[5].y + 20);
 		fontText(30, `${cost[5]}`, storeRects[5].x + storeRects[5].w/2, storeRects[5].y + 50);
