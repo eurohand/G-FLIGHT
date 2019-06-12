@@ -111,24 +111,19 @@
 	}
 	
 	function pointCheck(){
-		let currentPoint = parseInt(localStorage.getItem('Credit'));
-		if(currentPoint !== NaN){
-			localStorage.setItem('Credit', parseInt(score/1000));
-		}else{
-			currentPoint += parseInt(score/1000);
-			localStorage.setItem('Credit', currentPoint);
+		if(localStorage.getItem('Credit') == null){
+			localStorage.setItem('Credit', point);
+		} else{
+			point = parseInt(localStorage.getItem('Credit'));
 		}
 	}
 	
 	
 	function scoreCheck(){
-		let currentScore = parseInt(localStorage.getItem('HighScore'));
-		if(currentScore !== NaN){
-			localStorage.setItem('HighScore', parseInt(score));
-		}else{
-			if(currentScore < score){
-				localStorage.setItem('HighScore', score);
-			}
+		if(localStorage.getItem('HighScore') == null){
+			localStorage.setItem('HighScore', score);
+		} else if(parseInt(localStorage.getItem('HighScore') < score){
+			localStorage.setItem('HighScore', score);
 		}
 	}
 	
