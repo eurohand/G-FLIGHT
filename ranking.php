@@ -87,7 +87,7 @@ mysqli_select_db($connect, $database);
     .dot{
       position: absolute;
       left: random(1500);
-      top: ramdon(700);
+      top: random(700);
     }
 
   </style>
