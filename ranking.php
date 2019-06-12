@@ -174,8 +174,9 @@ mysqli_select_db($connect, $database);
 
 
   BODY.addEventListener("keydown", function(e){
+    console.log(keyActions[event.keyCode]);
     if(keyActions[event.keyCode] === "esc")
-    location.href = 'index.php';
+      location.href = 'index.php';
   })
 
   let keyActions = {
