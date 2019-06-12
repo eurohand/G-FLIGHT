@@ -77,8 +77,8 @@ mysqli_select_db($connect, $database);
 
     #goBack{
       position: absolute;
-      left: 120px;
-      top: 650px;
+      left: 110px;
+      top: 640px;
       color: white;
       font-family: 'VT323';
       font-size: 40px;
