@@ -149,7 +149,7 @@ mysqli_select_db($connect, $database);
   <script>
   const BODY = document.querySelector('body');
 
-  BODY.addEventlistener("keydown", function(e){
+  BODY.addEventListener("keydown", function(e){
     if(keyActions[event.keyCode] === "esc")
     location.href = 'index.php';
   })
