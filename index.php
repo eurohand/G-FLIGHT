@@ -1251,7 +1251,6 @@
 	let point = localStorage.getItem('Credit')? parseInt(localStorage.getItem('Credit')) : 0;
 	let start = false;
 	let store = false;
-	let rank = false;
 	let quadtree = false;
 	let boundary = new Rectangle(0, 0, width, height);
 	let ship = new Ship(width/2, height/2);
@@ -1393,7 +1392,7 @@
 			}else if(arrow.y === STORE_Y){
 				store = true;
 			}else if(arrow.y === RANK_Y){
-				rank = true;
+				location.href = 'index.php';
 			}
 		}
 	}
@@ -1422,11 +1421,6 @@
 		score = 0;
 	}
 	
-	function rankMove(direction){
-		if(direction === "esc"){
-			rank = false;
-		}
-	}
 	
 	//main game functions--------------------------------------------------------------------------------------------------------
 	
@@ -1645,16 +1639,6 @@
 		fontText(40, "NO", width/2+100, height/2+75);
 	}
 	
-	function showRank(){
-		ctx.fillStyle="Black";
-		ctx.fillRect(0, 0, width, height);
-		dots.forEach((dot) => {dot.draw();});
-		drawBorder();
-		fontText(40, "ESC: HOME", 100, 650);
-		fontText(20, "LEFT: PREVIOUS DAY", 500, 650);
-		fontText(20, "UP or DOWN: TOTAL/DAY SCORE", 900, 650);
-		fontText(20, "RIGHT: NEXT DAY", 1300, 650);
-	}
 	
 	function updateCredit(){
 		let currentPoint = parseInt(localStorage.getItem("Credit"));
