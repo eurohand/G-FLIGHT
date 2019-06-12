@@ -7,6 +7,12 @@ include_once($CFG['ABSPATH']."/config/set_db.php");
 include_once($CFG['ABSPATH']."/config/set_tbl.php");
 
 $connect = mysqli_connect($mydb['host'],$mydb['user'],$mydb['pass'],$mydb['name']);
+
+if (!$connect) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connection was successfully established!";
+
 mysqli_select_db($connect, $mydb['name']);
 
 $V = $_POST;
@@ -20,6 +26,6 @@ if($score > 0){
 }
 mysqli_close($connect);
 
-header("Location: ranking.php"); 
+// header("Location: ranking.php"); 
 
 ?>
