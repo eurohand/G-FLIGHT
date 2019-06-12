@@ -1324,8 +1324,6 @@
 				}else if(enoughPoint){
 					buyEvent(direction);
 				}
-			}else if(rank){
-				rankMove(direction);
 			}else{
 				readyMove(direction);
 			}
@@ -1430,8 +1428,6 @@
 		} else{
 			if(store){
 				gameStore();
-			}else if(rank){
-				showRank();
 			}else{
 				readyGame();
 			}
