@@ -23,9 +23,9 @@ mysqli_select_db($connect, $database);
     #container{
       width: 1500px;
       height: 700px;
-      border: "10px solid gray";
-      background-color: "black";
-      color: "white";
+      border: 10px solid gray;
+      background-color: black;
+      color: white;
     }
 
   </style>
