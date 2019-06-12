@@ -6,13 +6,13 @@ $url = getenv('mysql://wnvaak8rsg3pchfw:pimtbqjggrbf1tiv@thzz882efnak0xod.cbetxk
 $dbparts = parse_url($url);
 
 
-$hostname = 'thzz882efnak0xod.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
-$username = 'wnvaak8rsg3pchfw';
-$password = 'pimtbqjggrbf1tiv';
-$database = 'clp3n4gm746vekgy';
+// $hostname = 'thzz882efnak0xod.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
+// $username = 'wnvaak8rsg3pchfw';
+// $password = 'pimtbqjggrbf1tiv';
+// $database = 'clp3n4gm746vekgy';
 
-// $hostname = $dbparts['host'];
-// $username = $dbparts['user'];
-// $password = $dbparts['pass'];
-// $database = ltrim($dbparts['path'],'/');
+$hostname = $dbparts['host'];
+$username = $dbparts['user'];
+$password = $dbparts['pass'];
+$database = ltrim($dbparts['path'],'/');
 ?>
