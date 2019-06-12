@@ -142,7 +142,7 @@ mysqli_select_db($connect, $database);
         </tbody>
       </caption>
     </table>
-    <div id="goBack">ESC: HOME &nbsp; &nbsp; &nbsp; &nbsp; ENTER: SEARCH</div>
+    <div id="goBack">ESC: HOME &nbsp; &nbsp; &nbsp; ENTER: SEARCH</div>
   </div>
 
 
