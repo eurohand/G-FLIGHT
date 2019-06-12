@@ -25,6 +25,8 @@ $score=trim($V['score']);
 $date = date("Y-m-d");
 
 
+mysqli_query($connect, "ALTER TABLE ranking ADD "hash" int(255)");
+
 if($score > 0){
     $name=trim($V['name']);
 

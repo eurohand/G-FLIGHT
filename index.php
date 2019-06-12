@@ -1285,7 +1285,7 @@
 	}
 	let storeSelect = 0;
 	let storeCount = 0;
-	let cost = [0, 0, 0, 0, 0, 0, 0, 0];
+	let cost = [5, 10, 10, 20, 15, 30, 20, 40];
 	notEnoughPoint = false;
 	enoughPoint = false;
 	finalBuyCheck = true;

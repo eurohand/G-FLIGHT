@@ -161,9 +161,6 @@ mysqli_select_db($connect, $database);
     div.className = 'dot';
     div.bgColor = "#" + color + color + color;
     document.getElementByTagName('body')[0].appendChild(div);
-		this.x = x;
-		this.y = y;
-		this.r = r;
 		this.color = color+color+color;
 	}
 	
@@ -172,7 +169,7 @@ mysqli_select_db($connect, $database);
   let random = (number) => Math.floor(Math.random() * number);
   let dots = [];
   for(let i=0 ; i<250 ; i++){
-		dots.push(new Dot(random(width), random(height), random(4), random(14).toString(16)));
+		dots.push(new Dot(random(4), random(14).toString(16)));
 	}
 
 
