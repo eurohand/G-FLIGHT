@@ -29,10 +29,11 @@ mysqli_select_db($connect, $database);
       color: white;
     }
     #table{
-      width: 100%;
-      height: 100%;
+      width: 50%;
+      height: 70%;
       margin: auto;
       text-align: center;
+      font: 15px VT323;
     }
 
   </style>
@@ -62,6 +63,9 @@ mysqli_select_db($connect, $database);
           $re = mysqli_query($connect, $sql);
           $i = 1;
           while($data=mysqli_fetch_array($re)){
+            if($i>10){
+              break;
+            }
         ?>
         <tr>
             <th><?php echo $i;?></th>
