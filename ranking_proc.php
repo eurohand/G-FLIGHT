@@ -6,14 +6,14 @@ include_once("https://gflight.herokuapp.com/config/config.php");
 include_once($CFG['ABSPATH']."/config/set_db.php");
 include_once($CFG['ABSPATH']."/config/set_tbl.php");
 
-$connect = mysqli_connect($mydb['host'],$mydb['user'],$mydb['pass'],$mydb['name']);
+$connect = mysqli_connect($hostname, $username, $password, $database);
 
 if (!$connect) {
     die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connection was successfully established!";
 
-mysqli_select_db($connect, $mydb['name']);
+mysqli_select_db($connect, $database);
 
 $V = $_POST;
 
