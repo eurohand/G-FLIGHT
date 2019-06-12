@@ -589,9 +589,7 @@
 		}else if(this.skillStatus === 2){
 			this.lineSkill();
 		}else if(this.skillStatus === 3){
-			for(var i=0 ; i<120 ; i++){
-			shipShoots.push(new Shoot(this.x, this.y, 50*Math.cos(Math.PI/180*i*3), -50*Math.sin(Math.PI/180*i*3), true));
-			}
+			this.rainSkill();
 		}else if(this.skillStatus === 4){
 			this.mineSkill();
 		}
@@ -731,6 +729,12 @@
 				temp = -1;
 			}
 			shipShoots.push(new Shoot(this.x, i, 0, temp*50, true));
+		}
+	}
+
+	Ship.prototype.rainSkill = function(){
+		for(let i=0 ; i<150 ; i++){
+			shipShoots.push(new Shoot(i*10, height, 0, -7, true));
 		}
 	}
 	
