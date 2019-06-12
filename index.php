@@ -122,7 +122,7 @@
 	function scoreCheck(){
 		if(localStorage.getItem('HighScore') == null){
 			localStorage.setItem('HighScore', score);
-		} else if(parseInt(localStorage.getItem('HighScore') < score){
+		} else if(parseInt(localStorage.getItem('HighScore')) < score){
 			localStorage.setItem('HighScore', score);
 		}
 	}
