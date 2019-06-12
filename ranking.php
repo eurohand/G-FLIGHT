@@ -176,7 +176,7 @@ mysqli_select_db($connect, $database);
   let random = (number) => Math.floor(Math.random() * number);
   let dots = [];
   for(let i=0 ; i<250 ; i++){
-		dots.push(new Dot(random(4), random(14).toString(16)));
+		dots.push(new Dot(random(1500), random(700), random(4), random(14).toString(16)));
 	}
 
 
