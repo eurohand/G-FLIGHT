@@ -93,6 +93,10 @@ mysqli_select_db($connect, $database);
       top: random(700);
     }
 
+    span{
+      font-size: 20px;
+    }
+
   </style>
 
 
@@ -145,7 +149,9 @@ mysqli_select_db($connect, $database);
     </table>
     <div id="goBack">
     ESC: HOME &nbsp; &nbsp; &nbsp; ENTER: SEARCH &nbsp; &nbsp; &nbsp;
-    LEFT: PREVIOUS DAY &nbsp; &nbsp; &nbsp; RIGHT: NEXT DAY &nbsp; &nbsp; &nbsp; UP & DOWN: CHANGE RANK MODE
+          <span>
+          LEFT: PREVIOUS DAY &nbsp; &nbsp; &nbsp; RIGHT: NEXT DAY &nbsp; &nbsp; &nbsp; UP & DOWN: CHANGE RANK MODE
+          </span>
     </div>
   </div>
 
