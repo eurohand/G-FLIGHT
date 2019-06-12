@@ -1704,7 +1704,7 @@
       objs3.setAttribute('type', 'hidden');
       objs3.setAttribute('name', 'hash');
       objs3.setAttribute('value', hash(name));
-      form.appendChild(objs2);
+      form.appendChild(objs3);
 
       form.setAttribute('method', 'post');
       form.setAttribute('action', "ranking_proc.php");
