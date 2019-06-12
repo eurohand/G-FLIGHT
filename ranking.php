@@ -78,6 +78,7 @@ mysqli_select_db($connect, $database);
     #goBack{
       float: left;
       margin-left: 5%;
+      color: white;
       font-family: 'VT323';
       font-size: 40px;
     }
@@ -129,6 +130,7 @@ mysqli_select_db($connect, $database);
         </tbody>
       </caption>
     </table>
+    <div id="goBack">ESC: HOME</div>
   </div>
 
 
@@ -141,7 +143,7 @@ mysqli_select_db($connect, $database);
 
  
 
-  <div id="goBack">ESC: HOME</div>
+  
 
   <script>
   const BODY = document.querySelector('body');
