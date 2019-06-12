@@ -37,7 +37,7 @@ if($score > 0){
             mysqli_query($connect, "UPDATE ranking SET score='$score' WHERE date='$date' AND name='$name'");
         }
     }else{
-        mysqli_query($connect, "INSERT INTO ranking (score, name, date) VALUES ('$score', '$name', '$date')");
+        mysqli_query($connect, "INSERT INTO ranking (score, name, date, hash) VALUES ('$score', '$name', '$date', '$hash')");
     }
 
 }
