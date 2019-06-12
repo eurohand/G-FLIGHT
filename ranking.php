@@ -161,7 +161,7 @@ mysqli_select_db($connect, $database);
   let Dot = function(x, y, r, color){
     let div = document.createElement('div');
     div.className = 'dot';
-    div.style.background-color = "#" + color + color + color;
+    div.style.backgroundColor = "#" + color + color + color;
     div.style.width = r + 'px';
     div.style.height = r + 'px';
     div.style.position = 'absolute';
