@@ -24,7 +24,6 @@ $V = $_POST;
 $score=trim($V['score']);
 $date = date("Y-m-d");
 
-mysqli_query($connect, "DELETE FROM ranking");
 
 if($score > 0){
     $name=trim($V['name']);
