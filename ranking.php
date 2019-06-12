@@ -55,8 +55,9 @@ mysqli_select_db($connect, $database);
       border: 10px solid gray;
       background-color: black;
       color: white;
+      font family: 'VT323';
     }
-    #table{
+    #dbtable{
       width: 50%;
       height: 70%;
       margin-left: auto;
@@ -70,7 +71,7 @@ mysqli_select_db($connect, $database);
 
 
   <div id="container">
-    <table id="table">
+    <table id="dbtable">
       <caption>
         <colgroup>
           <col style="width:10%">
