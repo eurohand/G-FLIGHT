@@ -51,6 +51,9 @@ mysqli_select_db($connect, $database);
       src: local('VT323 Regular'), local('VT323-Regular'), url(./font/pxiKyp0ihIEF2isfFJU.woff2) format('woff2');
       unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }
+    body{}
+      font-family: 'VT323';
+    }
 
     #container{
       width: 1480px;
@@ -67,7 +70,6 @@ mysqli_select_db($connect, $database);
       margin-right: auto;
       margin-top: 5%;
       text-align: center;
-      font-family: 'VT323';
       font-size: 40px;
     }
     th{
