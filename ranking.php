@@ -248,7 +248,7 @@ mysqli_select_db($connect, $database);
         $sql="SELECT * FROM ranking ORDER BY score DESC WHERE hash=$hashIndex AND name=$searchName";
         $searchre = mysqli_query($connect, $sql);
       ?>
-      alert(<?php $searchre ?>);
+      console.log(<?php $searchre ?>);
     }
 
     function changeMode(){
