@@ -8,6 +8,9 @@
 </head>
 <body>
 <canvas id = "canvas" width = "1500" height = "700"></canvas>
+<audio data-key="hit" src="bgm/hit.mp3"></audio>
+<audio data-key="damage" src="bgm/damage,mp3"></audio>
+<audio data-key="gameover" src="bgm/gameover.mp3"></audio>
 <style>
   @font-face {
       font-family: 'VT323';
@@ -97,6 +100,7 @@
 	
 	function gameOver() {
 		clearInterval(intervalId);
+		playSound("gameover");
 		ctx.fillStyle =  "White";
 		textSetting("center", "middle", "30px Courier");
 		ctx.fillText("Game Over", width/2, height/2);
@@ -175,6 +179,18 @@
 	let cos = (a) => Math.cos(Math.PI/180 * a);
 	
 	
+	function playSound(type) {
+    let audio = document.querySelector(`audio[data-key="${type}"]`);
+    if (!audio) return;
+
+    audio.currentTime = 0;
+    audio.play();
+	}
+
+
+
+
+
 	
 	
 	
@@ -542,6 +558,7 @@
 		shipShoots.forEach((shoot) => {
 			if(shoot.x > left && shoot.x < right && shoot.y > up && shoot.y < down && !shoot.my){
 				this.hp -= 25;
+				playSound("damage");
 				shipShoots.splice(shipShoots.indexOf(shoot), 1);
 			}
 		});
@@ -854,6 +871,7 @@
 			|| (Math.sqrt((shoot.x - x)*(shoot.x - x) + (shoot.y - y)*(shoot.y - y)) < ENEMY_SIZE && shoot.my)){
 				enemies.splice(i, 1);
 				shipShoots.splice(shipShoots.indexOf(shoot), 1);
+				playSound("hit");
 				score += 10;
 				ship.mpPlus(5);
 				booms.push(new Boom(this.x, this.y, "enemy"));
