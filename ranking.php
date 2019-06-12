@@ -246,10 +246,10 @@ mysqli_select_db($connect, $database);
         $searchName = "<script>document.write (searchName);</script>";
         $hashIndex = "<script>document.write (hashIndex);</script>";
 
-        $sql="SELECT * FROM ranking ORDER BY score DESC WHERE hash=$hashIndex AND name=$searchName";
+        $sql="SELECT * FROM ranking ORDER BY score WHERE hash=$hashIndex AND name=$searchName";
         $searchre = mysqli_query($connect, $sql);
       ?>
-      console.log(<?php $searchre ?>);
+      alert(<?php $searchre ?>);
     }
 
     function changeMode(){
