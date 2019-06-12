@@ -1390,7 +1390,7 @@
 			}else if(arrow.y === STORE_Y){
 				store = true;
 			}else if(arrow.y === RANK_Y){
-				location.href = 'index.php';
+				location.href = 'ranking.php';
 			}
 		}
 	}
