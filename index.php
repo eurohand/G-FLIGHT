@@ -869,7 +869,7 @@
 		shipShoots.forEach((shoot) => {
 			if((shoot.x >= left && shoot.x <= right && shoot.y >= up && shoot.y <= down && shoot.my && species === 0)
 			|| (Math.sqrt((shoot.x - x)*(shoot.x - x) + (shoot.y - y)*(shoot.y - y)) < ENEMY_SIZE && shoot.my)){
-				this..use = false;
+				this.use = false;
 				shipShoots.splice(shipShoots.indexOf(shoot), 1);
 				playSound("hit");
 				score += 10;
