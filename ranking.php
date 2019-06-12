@@ -20,19 +20,26 @@ mysqli_select_db($connect, $database);
   </head>
   <body>
   <style>
+   @import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
     #container{
-      width: 1500px;
-      height: 700px;
+      width: 1480px;
+      height: 680px;
       border: 10px solid gray;
       background-color: black;
       color: white;
+    }
+    #table{
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      text-align: center;
     }
 
   </style>
 
 
   <div id="container">
-    <table>
+    <table id="table">
       <caption>
         <colgroup>
           <col style="width:10%">
