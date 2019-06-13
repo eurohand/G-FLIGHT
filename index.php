@@ -177,6 +177,10 @@
     audio.play();
 	}
 	
+
+	function getDistance(node1, node2){
+		return Math.sqrt((node1.x-node2.x)*(node1.x-node2.x) + (node1.y-node2.y)*(node1.y-node2.y));
+	}
 	
 	
 	
@@ -251,7 +255,40 @@
 	
 	
 	
-	
+	//#prim-----------------------------------------------------------------------------------------------------------------------
+
+	function primActivate(){
+		for(let i=0 ; i<portions.length-1 ; i++){
+			drawPrim();
+		}
+	}
+
+	function drawPrim(){
+		let minStartIndex = 0;
+		let minEndIndex = 0;
+		let minDistance = 9999;
+		for(let i=0 ; i<portions.length ; i++){
+			if(portions[i].prim){
+				for(let j=0 ; j<portions.length ; j++){
+					if(getDistance(portions[i], portions[j]) < minDistance)
+					&& portions[j].prim == false){
+						minStartIndex = i;
+						minEndIndex = j;
+						minDistance = getDistance(portions[minStartIndex], portions[minEndIndex];
+					}
+				}
+			}
+		}
+		ctx.lineWidth = 1;
+		ctx.strokeStyle = "hotpink";
+		ctx.beginPath();
+		ctx.moveTo(portions[minStartIndex].x, portions[minStartIndex].y);
+		ctx.lineTo(portions[minInminEndIndexdex].x, portions[minEndIndex].y);
+		ctx.closePath();
+		ctx.stroke();
+
+		portions[minInminEndIndexdex].prim = true;
+	}
 	
 	
 	
@@ -423,6 +460,8 @@
 		
 		this.wavePoint = 0;
 		this.waveControl = true;
+
+		this.prim = false;
 	}
 	
 	Ship.prototype.move = function() {
@@ -1169,6 +1208,7 @@
 		this.xSpeed = xSpeed;
 		this.ySpeed = ySpeed;
 		this.r = PORTION_SIZE;
+		this.prim = false;
 	}
 	
 	Portion.prototype.draw = function(){
@@ -1514,6 +1554,7 @@
 		enemyActivate();
 		boomActivate();
 		portionActivate();
+		primActivate();
 	}
 	
 	
