@@ -15,6 +15,7 @@ $V = $_POST;
 
 $searchName=trim($V['searchName']);
 $searchHash=trim($V['searchHash']);
+$dateRank=trim($V['dateRank']);
 
 ?>
 <!DOCTYPE html>
@@ -140,6 +141,8 @@ $searchHash=trim($V['searchHash']);
           <?php
             if($searchHash){
               $sql="SELECT * FROM ranking WHERE hash = '$searchHash' ORDER BY score DESC";
+            }else if($dateRank){
+              $sql="SELECT * FROM ranking WHERE date = '$dateRank' ORDER BY score DESC";
             }else{
               $sql="SELECT * FROM ranking ORDER BY score DESC";
             }        
@@ -270,8 +273,29 @@ $searchHash=trim($V['searchHash']);
     }
 
     function changeMode(){
-      mode = !mode;
+      var form = document.createElement('form');
+      var objs;
+      objs = document.createElement('input');
+      objs.setAttribute('type', 'hidden');
+      objs.setAttribute('name', 'dateRank');
+      objs.setAttribute('value', formatDate());
+      form.appendChild(objs);
+      form.setAttribute('method', 'post');
+      form.setAttribute('action', "ranking.php");
+      document.body.appendChild(form);
+      form.submit();
     }
+
+    function formatDate(date) {
+      var d = new Date(date);
+      let month = '' + (d.getMonth() + 1);
+      let day = '' + d.getDate();
+      let year = d.getFullYear();
+      if (month.length < 2){month = '0' + month;}
+      if (day.length < 2) {day = '0' + day;}
+      return [year, month, day].join('-');
+    }
+
 
     function hash(name){
         let key = 0;
