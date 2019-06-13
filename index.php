@@ -173,7 +173,7 @@
 	function playSound(type) {
     let audio = document.querySelector(`audio[data-key="${type}"]`);
     if (!audio) return;
-    audio.currentTime = 0;
+    audio.currentTime = 0.5;
     audio.play();
 	}
 	
