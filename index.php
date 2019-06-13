@@ -274,7 +274,7 @@
 					&& portions[j].prim == false){
 						minStartIndex = i;
 						minEndIndex = j;
-						minDistance = getDistance(portions[minStartIndex], portions[minEndIndex];
+						minDistance = getDistance(portions[minStartIndex], portions[minEndIndex]);
 					}
 				}
 			}
