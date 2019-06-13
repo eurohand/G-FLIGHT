@@ -279,16 +279,16 @@ $dateRank=trim($V['dateRank']);
       objs.setAttribute('type', 'hidden');
       objs.setAttribute('name', 'dateRank');
       objs.setAttribute('value', mode ? formatDate() : null);
-      mode = !mode;
       form.appendChild(objs);
       form.setAttribute('method', 'post');
       form.setAttribute('action', "ranking.php");
       document.body.appendChild(form);
+      mode = !mode;
       form.submit();
     }
 
-    function formatDate(date) {
-      var d = new Date(date);
+    function formatDate() {
+      var d = new Date();
       let month = '' + (d.getMonth() + 1);
       let day = '' + d.getDate();
       let year = d.getFullYear();
