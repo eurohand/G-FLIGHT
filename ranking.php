@@ -11,6 +11,8 @@ $database = 'clp3n4gm746vekgy';
 $connect = mysqli_connect($hostname,$username,$password,$database);
 mysqli_select_db($connect, $database);
 
+$tableType = true;
+$date = date("Y-m-d");
 ?>
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
@@ -133,7 +135,12 @@ mysqli_select_db($connect, $database);
 
           <tbody>
           <?php
-            $sql="SELECT * FROM ranking ORDER BY score DESC";
+            if($tableType){
+              $sql="SELECT * FROM ranking ORDER BY score DESC";
+            }else{
+              $sql="SELECT * FROM ranking ORDER BY score WHERE date=$date DESC";
+            }
+            
             $re = mysqli_query($connect, $sql);
             $i = 1;
             while($data=mysqli_fetch_array($re)){
@@ -245,7 +252,8 @@ mysqli_select_db($connect, $database);
     }
 
     function changeMode(){
-      mode = !mode;
+      <?php $tableType = !$tableType ?>
+      location.href = 'ranking.php';
     }
 
     function hash(name){
