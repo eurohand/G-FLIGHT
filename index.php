@@ -258,8 +258,12 @@
 	//#prim-----------------------------------------------------------------------------------------------------------------------
 
 	function primActivate(){
+		portions[0].prim = true;
 		for(let i=0 ; i<portions.length-1 ; i++){
 			drawPrim();
+		}
+		for(let i=0 ; i<portions.length ; i++){
+			portions[i].prim = false;
 		}
 	}
 
