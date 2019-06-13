@@ -127,7 +127,7 @@ mysqli_select_db($connect, $database);
               <th scope="col">NAME</th>
               <th scope="col">SCORE</th>
               <th scope="col">DATE</th>
-              <th scope="col">HASH KEY</th>
+              <th scope="col">HASH</th>
               </tr>
           </thead>
 
