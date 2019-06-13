@@ -1666,7 +1666,7 @@
 	function updateHighScore(){
 		let currentHighScore = parseInt(localStorage.getItem("HighScore"));
 		if(currentHighScore !== NaN){
-			highScore = currentHighScore	;
+			highScore = currentHighScore;
 		}
 	}
 	
