@@ -41,8 +41,6 @@
 </style>
 <script>
 	
-
-
 	//#constant------------------------------------------------------------------------------------------------------------------
 	
 	const canvas = document.getElementById("canvas");
@@ -76,7 +74,6 @@
 	
 	
 	//#basic---------------------------------------------------------------------------------------------------------------------
-
 	function textSetting(align, baseline, font){
 		ctx.textAlign = align;
 		ctx.textBaseline = baseline;
@@ -146,7 +143,6 @@
 			shipSkillStatus = parseInt(localStorage.getItem('Skill'));
 		}
 	}
-
 	
 	function drawScore() {
 		ctx.textBaseline = "top";
@@ -163,7 +159,7 @@
 		ctx.fillRect(20, 65, ship.hp, 10);
 		ctx.fillStyle = "Blue";
 		ctx.fillRect(20, 85, ship.mp, 10);
-	}
+	};
 	
 	
 	function circle(x, y, r){
@@ -179,17 +175,11 @@
 	
 	
 	function playSound(type) {
-    	let audio = document.querySelector(`audio[data-key="${type}"]`);
-    	if (!audio) return;
-
-   	 	audio.currentTime = 0;
-    	audio.play();
+    let audio = document.querySelector(`audio[data-key="${type}"]`);
+    if (!audio) return;
+    audio.currentTime = 0;
+    audio.play();
 	}
-
-
-
-
-
 	
 	
 	
@@ -730,7 +720,6 @@
 			shipShoots.push(new Shoot(this.x, i, 0, temp*50, true));
 		}
 	}
-
 	Ship.prototype.rainSkill = function(){
 		for(let i=0 ; i<150 ; i++){
 			shipShoots.push(new Shoot(i*10, this.y, 0, -7, true));
@@ -845,8 +834,6 @@
 		}
 	}
 		
-
-
 	
 	Enemy.prototype.shoot = function() {
 		if(this.species === 0){
@@ -1020,7 +1007,6 @@
 			ctx.closePath();
 			ctx.fill();
 			ctx.stroke();
-
 			ctx.fillStyle="Green";
 			ctx.beginPath();
 			ctx.moveTo(this.x, this.y-(t*3));
@@ -1078,7 +1064,6 @@
 		ctx.stroke();
 		ctx.fill();
 		ctx.closePath();
-
 		ctx.fillStyle="#99cc33";
 		ctx.beginPath();
 		ctx.moveTo(this.x, this.y - ENEMY_SIZE);
@@ -1086,15 +1071,12 @@
 		ctx.lineTo(this.x + ENEMY_SIZE*1.5, this.y + ENEMY_SIZE/3);
 		ctx.closePath();
 		ctx.fill();
-
 		ctx.fillStyle="#339900";
 		ctx.beginPath();
 		ctx.rect (this.x - ENEMY_SIZE*1.5, this.y + ENEMY_SIZE/3, ENEMY_SIZE*3, ENEMY_SIZE/8);
 		ctx.closePath();
 		ctx.fill();
 		ctx.closePath();
-
-
 		ctx.fillStyle="#66ccff";
 		ctx.beginPath();
 		ctx.arc(this.x, this.y + (5/2), ENEMY_SIZE, 0, 1.0*Math.PI, true);
@@ -1102,13 +1084,11 @@
 		ctx.stroke();
 		ctx.fill();
 		ctx.closePath();
-
 		ctx.fillStyle="#ffcc66";
 		ctx.beginPath();
 		ctx.arc(this.x, this.y - ENEMY_SIZE/3, ENEMY_SIZE/3, 0, 2.5*Math.PI, false);
 		ctx.fill();
 		ctx.closePath();
-
 		ctx.fillStyle="white";
 		ctx.beginPath();
 		ctx.arc(this.x, this.y - ENEMY_SIZE/3, ENEMY_SIZE/4, 0, 2.5*Math.PI, false);
@@ -1241,10 +1221,6 @@
 		ctx.fillStyle = "#" + this.color;
 		ctx.fillRect(this.x, this.y, this.r, this.r);
 	}
-
-
-
-
 	//#storeRect-----------------------------------------------------------------------------------------------------------------
 	let StoreRect = function(x, y, w, h){
 		this.x = x;
@@ -1704,7 +1680,6 @@
       objs3.setAttribute('name', 'hash');
       objs3.setAttribute('value', hash(name));
       form.appendChild(objs3);
-
       form.setAttribute('method', 'post');
       form.setAttribute('action', "ranking_proc.php");
       document.body.appendChild(form);
