@@ -285,8 +285,8 @@
 				}
 			}
 		}
-		ctx.lineWidth = 1;
-		ctx.strokeStyle = "hotpink";
+		ctx.lineWidth = 0.5;
+		ctx.strokeStyle = "dartmagenta";
 		ctx.beginPath();
 		ctx.moveTo(portions[minStartIndex].x, portions[minStartIndex].y);
 		ctx.lineTo(portions[minEndIndex].x, portions[minEndIndex].y);
