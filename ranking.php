@@ -239,7 +239,10 @@ mysqli_select_db($connect, $database);
 
 
     //event handle function
-   
+    function search(){
+      let searchName = prompt("TYPE NAME ?");
+      let searchHash = hash(searchName);
+    }
 
     function changeMode(){
       mode = !mode;
