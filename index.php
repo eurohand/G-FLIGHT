@@ -258,29 +258,32 @@
 	//#prim-----------------------------------------------------------------------------------------------------------------------
 
 	function primActivate(){
-		for(let i=0 ; i<portions.length-1 ; i++){
-			if(i===0){
-				portions[i].prim = true;
+		if(prim){
+			for(let i=0 ; i<enemies.length-1 ; i++){
+				if(i===0){
+					enemies[i].prim = true;
+				}
+				drawPrim();
 			}
-			drawPrim();
+			for(let i=0 ; i<enemies.length ; i++){
+				enemies[i].prim = false;
+			}
 		}
-		for(let i=0 ; i<portions.length ; i++){
-			portions[i].prim = false;
-		}
+		
 	}
 
 	function drawPrim(){
 		let minStartIndex = 0;
 		let minEndIndex = 0;
 		let minDistance = 9999;
-		for(let i=0 ; i<portions.length ; i++){
-			if(portions[i].prim){
-				for(let j=0 ; j<portions.length ; j++){
-					if(getDistance(portions[i], portions[j]) < minDistance
-					&& portions[j].prim == false){
+		for(let i=0 ; i<enemies.length ; i++){
+			if(enemies[i].prim){
+				for(let j=0 ; j<enemies.length ; j++){
+					if(getDistance(enemies[i], enemies[j]) < minDistance
+					&& enemies[j].prim == false){
 						minStartIndex = i;
 						minEndIndex = j;
-						minDistance = getDistance(portions[minStartIndex], portions[minEndIndex]);
+						minDistance = getDistance(enemies[minStartIndex], enemies[minEndIndex]);
 					}
 				}
 			}
@@ -288,12 +291,12 @@
 		ctx.lineWidth = 1;
 		ctx.strokeStyle = "rgba(255,105,180, 0.7)";
 		ctx.beginPath();
-		ctx.moveTo(portions[minStartIndex].x, portions[minStartIndex].y);
-		ctx.lineTo(portions[minEndIndex].x, portions[minEndIndex].y);
+		ctx.moveTo(enemies[minStartIndex].x, enemies[minStartIndex].y);
+		ctx.lineTo(enemies[minEndIndex].x, enemies[minEndIndex].y);
 		ctx.closePath();
 		ctx.stroke();
 
-		portions[minEndIndex].prim = true;
+		enemies[minEndIndex].prim = true;
 	}
 	
 	
@@ -542,6 +545,12 @@
 				quadtree = false;
 			}else{
 				quadtree = true;
+			}	
+		}else if(direction === "backspace"){
+			if(prim){
+				prim = false;
+			}else{
+				prim = true;
 			}	
 		}
 	}
@@ -850,6 +859,7 @@
 		this.species = species;
 		this.count = 0;
 		this.use = true;
+		this.prim = false;
 	}
 	
 	Enemy.prototype.move = function() {
@@ -1285,6 +1295,7 @@
 	let highScore = localStorage.getItem('HighScore')? parseInt(localStorage.getItem('HighScore')) : 0;
 	let point = localStorage.getItem('Credit')? parseInt(localStorage.getItem('Credit')) : 0;
 	let start = false;
+	let prim = false;
 	let store = false;
 	let quadtree = false;
 	let boundary = new Rectangle(0, 0, width, height);
