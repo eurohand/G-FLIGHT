@@ -163,7 +163,7 @@
 		ctx.fillRect(20, 65, ship.hp, 10);
 		ctx.fillStyle = "Blue";
 		ctx.fillRect(20, 85, ship.mp, 10);
-	};
+	}
 	
 	
 	function circle(x, y, r){
@@ -179,11 +179,11 @@
 	
 	
 	function playSound(type) {
-    let audio = document.querySelector(`audio[data-key="${type}"]`);
-    if (!audio) return;
+    	let audio = document.querySelector(`audio[data-key="${type}"]`);
+    	if (!audio) return;
 
-    audio.currentTime = 0;
-    audio.play();
+   	 	audio.currentTime = 0;
+    	audio.play();
 	}
 
 
@@ -1666,7 +1666,7 @@
 	function updateHighScore(){
 		let currentHighScore = parseInt(localStorage.getItem("HighScore"));
 		if(currentHighScore !== NaN){
-			highScore = currentHighScore;
+			highScore = currentHighScore	;
 		}
 	}
 	
@@ -1711,6 +1711,7 @@
       form.submit();
       
    }
+	
 	
 	
 </script>
