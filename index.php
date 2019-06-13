@@ -285,8 +285,8 @@
 				}
 			}
 		}
-		ctx.lineWidth = 0.5;
-		ctx.strokeStyle = "rgba(255,105,180, 0.5)";
+		ctx.lineWidth = 1;
+		ctx.strokeStyle = "rgba(255,105,180, 0.7)";
 		ctx.beginPath();
 		ctx.moveTo(portions[minStartIndex].x, portions[minStartIndex].y);
 		ctx.lineTo(portions[minEndIndex].x, portions[minEndIndex].y);
