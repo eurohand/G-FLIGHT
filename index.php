@@ -270,7 +270,7 @@
 		for(let i=0 ; i<portions.length ; i++){
 			if(portions[i].prim){
 				for(let j=0 ; j<portions.length ; j++){
-					if(getDistance(portions[i], portions[j]) < minDistance)
+					if(getDistance(portions[i], portions[j]) < minDistance
 					&& portions[j].prim == false){
 						minStartIndex = i;
 						minEndIndex = j;
