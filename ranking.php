@@ -136,7 +136,7 @@ $date = date("Y-m-d");
           <tbody>
           <?php
             if($tableType){
-              $sql="SELECT * FROM ranking ORDER BY score DESC";
+              $sql="SELECT * FROM ranking WHERE date=$date ORDER BY score DESC";
             }else{
               $sql="SELECT * FROM ranking WHERE date=$date ORDER BY score DESC";
             }
