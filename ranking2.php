@@ -11,11 +11,7 @@ $database = 'clp3n4gm746vekgy';
 $connect = mysqli_connect($hostname,$username,$password,$database);
 mysqli_select_db($connect, $database);
 
-$V = $_POST;
-
-$searchName=trim($V['searchName']);
-$searchHash=trim($V['searchHash']);
-
+$date = date("Y-m-d");
 ?>
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
@@ -138,11 +134,7 @@ $searchHash=trim($V['searchHash']);
 
           <tbody>
           <?php
-            if($searchHash){
-              $sql="SELECT * FROM ranking WHERE hash = '$searchHash' ORDER BY score DESC";
-            }else{
-              $sql="SELECT * FROM ranking ORDER BY score DESC";
-            }        
+            $sql="SELECT * FROM ranking WHERE date='$date' ORDER BY score DESC";
             $re = mysqli_query($connect, $sql);
             $i = 1;
             while($data=mysqli_fetch_array($re)){
@@ -189,7 +181,7 @@ $searchHash=trim($V['searchHash']);
  
 
   
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
   <script>
   const BODY = document.querySelector('body');
   const TABLE_SIZE = 50;
@@ -206,15 +198,15 @@ $searchHash=trim($V['searchHash']);
     div.style.left = x + 'px';
     div.style.top = y + 'px';
     document.getElementById("container").appendChild(div);
-      this.color = color+color+color;
-   }
-   
+		this.color = color+color+color;
+	}
+	
 
   let random = (number) => Math.floor(Math.random() * number);
   let dots = [];
   for(let i=0 ; i<250 ; i++){
-      dots.push(new Dot(random(1500), random(700), random(4), random(14).toString(16)));
-   }
+		dots.push(new Dot(random(1500), random(700), random(4), random(14).toString(16)));
+	}
 
 
 
@@ -251,39 +243,24 @@ $searchHash=trim($V['searchHash']);
     function search(){
       let searchName = prompt("TYPE NAME ?");
       let searchHash = hash(searchName);
-      var form = document.createElement('form');
-      var objs;
-      objs = document.createElement('input');
-      objs.setAttribute('type', 'hidden');
-      objs.setAttribute('name', 'searchName');
-      objs.setAttribute('value', searchName);
-      form.appendChild(objs);
-      objs2 = document.createElement('input');
-      objs2.setAttribute('type', 'hidden');
-      objs2.setAttribute('name', 'searchHash');
-      objs2.setAttribute('value', searchHash);
-      form.appendChild(objs2);
-      form.setAttribute('method', 'post');
-      form.setAttribute('action', "ranking.php");
-      document.body.appendChild(form);
-      form.submit();
     }
 
     function changeMode(){
-      mode = !mode;
+      location.href = 'ranking.php';
     }
 
     function hash(name){
-        let key = 0;
-        for(let i=0 ; i<name.length ; i++){
-           key += name.charCodeAt(i);
-        }
-        return key%TABLE_SIZE;
-     }
+		  let key = 0;
+		  for(let i=0 ; i<name.length ; i++){
+		  	key += name.charCodeAt(i);
+		  }
+		  return key%TABLE_SIZE;
+  	}
 
   </script>
   </body>
 </html>
+
 
 
 
