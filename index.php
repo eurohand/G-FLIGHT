@@ -283,11 +283,11 @@
 		ctx.strokeStyle = "hotpink";
 		ctx.beginPath();
 		ctx.moveTo(portions[minStartIndex].x, portions[minStartIndex].y);
-		ctx.lineTo(portions[minInminEndIndexdex].x, portions[minEndIndex].y);
+		ctx.lineTo(portions[minEndIndex].x, portions[minEndIndex].y);
 		ctx.closePath();
 		ctx.stroke();
 
-		portions[minInminEndIndexdex].prim = true;
+		portions[minEndIndex].prim = true;
 	}
 	
 	
