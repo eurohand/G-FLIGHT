@@ -256,17 +256,16 @@
 	
 	
 	//#prim-----------------------------------------------------------------------------------------------------------------------
-
 	function primActivate(){
 		if(prim){
-			for(let i=0 ; i<enemies.length-1 ; i++){
+			for(let i=0 ; i<portions.length-1 ; i++){
 				if(i===0){
-					enemies[i].prim = true;
+					portions[i].prim = true;
 				}
 				drawPrim();
 			}
-			for(let i=0 ; i<enemies.length ; i++){
-				enemies[i].prim = false;
+			for(let i=0 ; i<portions.length ; i++){
+				portions[i].prim = false;
 			}
 		}
 		
@@ -276,14 +275,14 @@
 		let minStartIndex = 0;
 		let minEndIndex = 0;
 		let minDistance = 9999;
-		for(let i=0 ; i<enemies.length ; i++){
-			if(enemies[i].prim){
-				for(let j=0 ; j<enemies.length ; j++){
-					if(getDistance(enemies[i], enemies[j]) < minDistance
-					&& enemies[j].prim == false){
+		for(let i=0 ; i<portions.length ; i++){
+			if(portions[i].prim){
+				for(let j=0 ; j<portions.length ; j++){
+					if(getDistance(portions[i], portions[j]) < minDistance
+					&& portions[j].prim == false){
 						minStartIndex = i;
 						minEndIndex = j;
-						minDistance = getDistance(enemies[minStartIndex], enemies[minEndIndex]);
+						minDistance = getDistance(portions[minStartIndex], portions[minEndIndex]);
 					}
 				}
 			}
@@ -291,12 +290,12 @@
 		ctx.lineWidth = 1;
 		ctx.strokeStyle = "rgba(255,105,180, 0.7)";
 		ctx.beginPath();
-		ctx.moveTo(enemies[minStartIndex].x, enemies[minStartIndex].y);
-		ctx.lineTo(enemies[minEndIndex].x, enemies[minEndIndex].y);
+		ctx.moveTo(portions[minStartIndex].x, portions[minStartIndex].y);
+		ctx.lineTo(portions[minEndIndex].x, portions[minEndIndex].y);
 		ctx.closePath();
 		ctx.stroke();
 
-		enemies[minEndIndex].prim = true;
+		portions[minEndIndex].prim = true;
 	}
 	
 	
