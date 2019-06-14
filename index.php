@@ -5,6 +5,7 @@
 <link rel="preload" href="font/pxiKyp0ihIEF2isRFJXGdg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="font/pxiKyp0ihIEF2isfFJU.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 <title>G FLIGHT - Data Structure Project</title>
+<meta charset="UTF-8">
 </head>
 <body>
 <canvas id = "canvas" width = "1500" height = "700"></canvas>
@@ -1705,7 +1706,7 @@
 	function updateHighScore(){
 		let currentHighScore = parseInt(localStorage.getItem("HighScore"));
 		if(currentHighScore !== NaN){
-			highScore = currentHighScore	;
+			highScore = currentHighScore;
 		}
 	}
 	
