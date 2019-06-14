@@ -1297,6 +1297,8 @@
 	if(first){
 		highScore = 0;
 		point = 0;
+		localStorage.setItem('HighScore', 0);
+		localStorage.setItem('Credit', 0);
 	}else {
 		highScore = parseInt(localStorage.getItem('HighScore'));
 		point = parseInt(localStorage.getItem('Credit'));
