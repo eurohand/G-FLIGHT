@@ -913,7 +913,7 @@
 				score += 10;
 				ship.mpPlus(5);
 				booms.push(new Boom(this.x, this.y, "enemy"));
-				if(random(100) > 95){
+				if(random(100) > 70){
 					portions.push(new Portion(this.x, this.y, plusminus()*(2 + random(3)), plusminus()*(2 + random(3))));
 				}
 				return true;
@@ -926,7 +926,7 @@
 	function randomEnemy() {
 		let type = random(4);
 		let species
-		if(random(100)>90){
+		if(random(100)>80){
 			species = 1;
 		}else{
 			species = 0;
