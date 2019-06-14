@@ -1291,8 +1291,18 @@
 	
 	let userName;
 	let score = 0;
-	let highScore = localStorage.getItem('HighScore')? parseInt(localStorage.getItem('HighScore')) : 0;
-	let point = localStorage.getItem('Credit')? parseInt(localStorage.getItem('Credit')) : 0;
+	let highScore;
+	let point;
+	if(localStorage.getItem('HighScore')){
+		highScore = parseInt(localStorage.getItem('HighScore'));
+	}else{
+		highScore = 0;
+	}
+	if(localStorage.getItem('Credit')){
+		point = parseInt(localStorage.getItem('Credit'));
+	}else{
+		point  = 0;
+	}
 	let start = false;
 	let prim = false;
 	let store = false;
