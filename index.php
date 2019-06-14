@@ -1293,16 +1293,8 @@
 	let score = 0;
 	let highScore;
 	let point;
-	if(localStorage.getItem('HighScore')){
-		highScore = parseInt(localStorage.getItem('HighScore'));
-	}else{
-		highScore = 0;
-	}
-	if(localStorage.getItem('Credit')){
-		point = parseInt(localStorage.getItem('Credit'));
-	}else{
-		point  = 0;
-	}
+	
+	
 	let start = false;
 	let prim = false;
 	let store = false;
@@ -1476,7 +1468,7 @@
 	
 	
 	//main game functions--------------------------------------------------------------------------------------------------------
-	
+	init();
 	let intervalId = setInterval(function() {
 		if(start){
 			playGame();
@@ -1721,6 +1713,19 @@
 			localStorage.setItem('Skill', shipSkillStatus);
 		}
 		enoughPoint = false;
+	}
+
+	function init(){
+		if(localStorage.getItem('HighScore')){
+			highScore = parseInt(localStorage.getItem('HighScore'));
+		}else{
+			highScore = 0;
+		}
+		if(localStorage.getItem('Credit')){
+			point = parseInt(localStorage.getItem('Credit'));
+		}else{
+			point  = 0;
+		}
 	}
 	
 	function uploadRank(name){
