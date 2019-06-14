@@ -1290,9 +1290,17 @@
 	//set variables--------------------------------------------------------------------------------------------------------------
 	
 	let userName;
+	let first = true;
 	let score = 0;
 	let highScore;
 	let point;
+	if(first){
+		highScore = 0;
+		point = 0;
+	}else {
+		highScore = parseInt(localStorage.getItem('HighScore'));
+		point = parseInt(localStorage.getItem('Credit'));
+	}
 	
 	
 	let start = false;
@@ -1468,7 +1476,7 @@
 	
 	
 	//main game functions--------------------------------------------------------------------------------------------------------
-	init();
+	
 	let intervalId = setInterval(function() {
 		if(start){
 			playGame();
@@ -1715,18 +1723,6 @@
 		enoughPoint = false;
 	}
 
-	function init(){
-		if(localStorage.getItem('HighScore')){
-			highScore = parseInt(localStorage.getItem('HighScore'));
-		}else{
-			highScore = 0;
-		}
-		if(localStorage.getItem('Credit')){
-			point = parseInt(localStorage.getItem('Credit'));
-		}else{
-			point  = 0;
-		}
-	}
 	
 	function uploadRank(name){
 	  var form = document.createElement('form');
