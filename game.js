@@ -146,7 +146,7 @@ function drawLoading() {
   ctx.fillStyle = "White";
 
   fontText(20, "2019 DATA STRUCTURE PROJECT", 125, 675);
-  fontText(20, "CONTACT: eurohand@gc.gachon.ac.kr", 1350, 675);
+  fontText(20, "CONTACT: eurohand@naver.com", 1350, 675);
   fontText(150, "G-flight", width * 0.5, height * 0.2);
 
   fontText(50, "INSERT COIN", 775, START_Y);
