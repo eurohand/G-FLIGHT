@@ -142,7 +142,7 @@ function readyGame() {
 
 function drawLoading() {
   textSetting("center", "middle", "30px Courier");
-  ctx.drawImage(gachonImg, width - 100, 25, IMG_SIZE, IMG_SIZE);
+  // ctx.drawImage(gachonImg, width - 100, 25, IMG_SIZE, IMG_SIZE);
   ctx.fillStyle = "White";
 
   fontText(20, "2019 DATA STRUCTURE PROJECT", 125, 675);
